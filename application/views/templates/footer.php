@@ -11,7 +11,7 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            <p class="pb_font-14">&copy; 2019. Todos los derechos Reservados. <br>  <a href="http://www.intel.com">Intel Corporation</a> - Sistema de Hidrantes</p>
+            <p class="pb_font-14">&copy; 2020. Todos los derechos Reservados. <br>  <a href="http://www.intel.com">Intel Corporation</a> - Sistema de Hidrantes</p>
           </div>
         </div>
       </div>

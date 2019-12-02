@@ -22,24 +22,37 @@ html {
 	overflow-x: hidden;
 	font-size: 1em;
 }
+
 body {
 	font-family: $font-family-sans-serif;
 }
-input, textarea, p {
+
+input,
+textarea,
+p {
 	font-weight: $font-weight-normal;
 }
+
 // selection
 ::selection {
-  background: $black; 
-  color: $white;
+	background: $black;
+	color: $white;
 }
+
 ::-moz-selection {
-  background: $black; 
-  color: $white;
+	background: $black;
+	color: $white;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 300!important;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 300 !important;
 }
+
 a {
 	transition: .3s all ease;
 }
@@ -50,8 +63,10 @@ a {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
 .with-overlay {
 	position: relative;
+
 	&:before {
 		position: absolute;
 		top: 0;
@@ -59,7 +74,7 @@ a {
 		right: 0;
 		bottom: 0;
 		content: "";
-		background: rgba($black,.4);
+		background: rgba($black, .4);
 	}
 }
 
@@ -70,6 +85,7 @@ a {
 .heading-border-top {
 	position: relative;
 	padding-top: 30px;
+
 	&:before {
 		position: absolute;
 		top: 0;
@@ -78,24 +94,27 @@ a {
 		content: "";
 		background: theme-color('primary');
 	}
+
 	&.light {
 		&:before {
-			background: rgba($white, .7)!important;
-		}	
+			background: rgba($white, .7) !important;
+		}
 	}
 }
+
 .text-center {
 	.heading-border-top {
 		&:before {
 			left: 50%;
 			transform: translateX(-50%);
 		}
+
 		&.light {
 			&:before {
-				background: rgba($white, .7)!important;
-			}	
+				background: rgba($white, .7) !important;
+			}
 		}
-	}		
+	}
 }
 
 // sections
@@ -103,9 +122,11 @@ a {
 	padding: 9em 0;
 	position: relative;
 	display: block;
+
 	@include media-breakpoint-down(md) {
 		padding: 4em 0;
 	}
+
 	&.pb_bg-half {
 		&:before {
 			top: 50%;
@@ -115,78 +136,89 @@ a {
 			width: 100%;
 			left: 0;
 			position: absolute;
- 		}
+		}
 	}
 }
 
 // images absolute
 .images {
 	position: relative;
+
 	.img2 {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		max-width: 500px;
-		box-shadow: -17px 10px 34px -18px rgba(0,0,0,0.5);
+		box-shadow: -17px 10px 34px -18px rgba(0, 0, 0, 0.5);
+
 		@include media-breakpoint-down(sm) {
 			position: relative;
-			left: inherit!important;
-			top: inherit!important;
+			left: inherit !important;
+			top: inherit !important;
 			max-width: 100%;
 		}
 	}
+
 	&.right {
 		.img1 {
 			position: relative;
 			z-index: 2;
-			box-shadow: -17px 10px 34px -18px rgba(0,0,0,0.5);
+			box-shadow: -17px 10px 34px -18px rgba(0, 0, 0, 0.5);
 		}
+
 		.img2 {
 			position: absolute;
 			top: 50%;
 			left: -40%;
 			z-index: 1;
 			max-width: 500px;
+
 			@include media-breakpoint-down(sm) {
 				position: relative;
-				left: inherit!important;
-				top: inherit!important;
+				left: inherit !important;
+				top: inherit !important;
 				max-width: 100%;
 			}
 		}
 	}
-}	
+}
 
 // testimonial
 .pb_testimonial_v1 {
 	.media {
 		@include media-breakpoint-down(sm) {
-			display: block!important;
+			display: block !important;
 		}
+
 		img {
 			max-width: 200px;
+
 			@include media-breakpoint-down(sm) {
-				margin: 0 auto 20px auto!important;
+				margin: 0 auto 20px auto !important;
 			}
 		}
+
 		.media-body {
 			@include media-breakpoint-down(sm) {
 				width: 100%;
 				text-align: center;
 			}
 		}
+
 		blockquote {
 			font-style: italic;
-			
+
 			p {
 				color: $gray-900;
-				
+
 				font-size: 18px;
+
 				cite {
 					display: block;
 					font-size: $font-size-base;
 					font-style: normal;
 				}
+
 				&.pb_author {
 					font-style: normal;
 					color: $gray-600;
@@ -201,27 +233,36 @@ a {
 // footer
 .pb_footer {
 	padding: 5em 0;
+
 	.list-unstyled {
 		li {
 			margin-bottom: 10px;
 			line-height: 1.5;
 		}
 	}
+
 	&.bg-black {
 		background: $black;
+	}
+
+	.fa {
+		color: $red;
 	}
 }
 
 // cards
 .pb_card_v1 {
 	border: none;
+
 	.card-subtitle {
 		color: $gray-600;
 	}
+
 	.card-img-top {
 		margin-top: 30px;
 	}
 }
+
 .pb_card_v2 {
 	.icon {
 		i {
@@ -233,8 +274,10 @@ a {
 			}
 		}
 	}
+
 	.card-body {
 		padding-top: 0;
+
 		h4 {
 			margin-top: 0;
 			font-size: 16px;
@@ -248,10 +291,12 @@ a {
 	position: relative;
 	display: block;
 	overflow: hidden;
+
 	img {
 		transition: .3s all ease;
 		transform: scale(1.1);
 	}
+
 	&:before {
 		position: absolute;
 		transition: .3s all ease;
@@ -262,34 +307,39 @@ a {
 		content: "";
 		z-index: 1;
 		height: 100%;
-		background: rgba(0,0,0,.6);
+		background: rgba(0, 0, 0, .6);
 		opacity: 0;
 		visibility: hidden;
 	}
+
 	.icon {
 		font-size: 30px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
-		color: $white!important;
+		color: $white !important;
 		z-index: 1;
 		margin-top: 20px;
 		opacity: 0;
 		visibility: hidden;
 		transition: .2s all ease-out;
 	}
+
 	&:hover {
 		outline: none;
+
 		.icon {
 			margin-top: 0;
 			opacity: 1;
 			visibility: visible;
 		}
+
 		&:before {
 			opacity: 1;
 			visibility: visible;
 		}
+
 		img {
 			transform: scale(1.0);
 		}
@@ -301,9 +351,11 @@ a {
 .pb_half {
 	width: 50%;
 	float: left;
+
 	@include media-breakpoint-down(md) {
 		width: 100%;
 		float: none;
+
 		&#map {
 			height: 300px;
 		}
@@ -313,12 +365,13 @@ a {
 // collapse
 .pb_accordion {
 	.item {
-		> a {
+		>a {
 			display: block;
-			border-bottom: 1px solid $gray-200;	
+			border-bottom: 1px solid $gray-200;
 			padding: 10px 0;
 			position: relative;
 			color: $gray-700;
+
 			&:after {
 				position: absolute;
 				right: 0;
@@ -327,18 +380,21 @@ a {
 				@include Ionicons;
 				content: "\f2c7";
 			}
+
 			&[aria-expanded="true"] {
 				color: theme-color('primary');
-				border-bottom: 1px solid transparent;	
+				border-bottom: 1px solid transparent;
+
 				&:after {
 					content: "\f2f4";
 				}
 			}
 		}
-		> div {
+
+		>div {
 			*:last-child {
 				margin-bottom: 0;
-			}	
+			}
 		}
 	}
 }
@@ -347,11 +403,13 @@ a {
 .pb_contact_details_v1 {
 	margin: 0;
 	padding: 0;
+
 	li {
 		list-style: none;
 		padding: 0;
 		margin: 0 0 1em 0;
 		color: $gray-900;
+
 		span {
 			display: block;
 			font-size: 14px;
@@ -370,15 +428,19 @@ a {
 	height: 40px;
 	cursor: pointer;
 	color: $black;
+
 	@include media-breakpoint-down(sm) {
-		display: none!important;
+		display: none !important;
 	}
+
 	&.prev {
 		left: 20px;
 	}
+
 	&.next {
 		right: 20px;
 	}
+
 	i {
 		font-size: 40px;
 		position: absolute;
@@ -387,6 +449,7 @@ a {
 		transform: translateX(-50%) translateY(-50%);
 	}
 }
+
 .slick-dots {
 	position: absolute;
 	bottom: -40px;
@@ -397,6 +460,7 @@ a {
 	padding: 0;
 	margin: 0;
 	width: 100%;
+
 	li {
 		position: relative;
 		display: inline-block;
@@ -405,42 +469,48 @@ a {
 		margin: 0 5px;
 		padding: 0;
 		cursor: pointer;
+
 		button {
-	    border: 0;
-	    background: transparent;
-	    display: block;
-	    height: 20px;
-	    width: 20px;
-	    outline: none;
-	    line-height: 0px;
-	    font-size: 0px;
-	    color: transparent;
-	    padding: 5px;
-	    cursor: pointer;
-	    position: relative;
-	    &:before {
+			border: 0;
+			background: transparent;
+			display: block;
+			height: 20px;
+			width: 20px;
+			outline: none;
+			line-height: 0px;
+			font-size: 0px;
+			color: transparent;
+			padding: 5px;
+			cursor: pointer;
+			position: relative;
+
+			&:before {
 				width: 7px;
 				height: 7px;
 				content: "";
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				background: rgba(0,0,0, .2);
+				background: rgba(0, 0, 0, .2);
 				border-radius: 50%;
 				transform: translateX(-50%) translateY(-50%);
 				transition: .3s all ease-out;
-	    }
-	    &:hover, &:focus {
-	      outline: none; 
-	      &:before {
-	      	background: rgba(0,0,0, .7);
-	      }
-	    }
+			}
+
+			&:hover,
+			&:focus {
+				outline: none;
+
+				&:before {
+					background: rgba(0, 0, 0, .7);
+				}
+			}
 		}
+
 		&.slick-active button {
-		  &:before {
-      	background: rgba(0,0,0, .7);
-      }
+			&:before {
+				background: rgba(0, 0, 0, .7);
+			}
 		}
 	}
 }
@@ -448,19 +518,22 @@ a {
 //media or features
 .pb_media_v1,
 .pb_media_v2 {
-	> .icon {
+	>.icon {
 		width: 80px;
 		height: 80px;
 		position: relative;
+
 		i {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translateY(-50%) translateX(-50%);
+
 			&.flaticon {
 				top: 48%;
 				left: 50%;
 				transform: translateY(-50%) translateX(-50%);
+
 				&:before {
 					font-size: 46px;
 					margin: 0;
@@ -469,6 +542,7 @@ a {
 			}
 		}
 	}
+
 	h3 {
 		color: $gray-900;
 	}
@@ -479,10 +553,10 @@ a {
 	i {
 		&.flaticon {
 			&:before {
-				font-size: 80px; 
+				font-size: 80px;
 				margin: 0;
 				padding: 0;
-			}	
+			}
 		}
 	}
 }
@@ -493,6 +567,7 @@ a {
 		display: block;
 		position: relative;
 		color: $cyan;
+
 		&:before {
 			position: absolute;
 			content: "";
@@ -502,17 +577,20 @@ a {
 			right: 0;
 			background: rgba($black, .05);
 		}
+
 		.slide-text {
 			position: absolute;
 			z-index: 10;
 			bottom: 20px;
 			left: 20px;
+
 			h2 {
 				font-size: 24px;
 				font-weight: 400;
 				color: $white;
 				margin-bottom: 0;
 			}
+
 			*:last-child {
 				margin-bottom: 0;
 			}
@@ -525,20 +603,24 @@ a {
 		padding: 10px;
 		position: relative;
 	}
+
 	&.slider-nav {
 		.slick-slide {
 			margin: 10px;
 			padding: 0;
 			transition: .3s all ease-out;
 			border: 2px solid transparent;
+
 			.pb_card_v2 {
 				background: none;
 			}
+
 			&.slick-current {
-			
+
 				.pb_card_v2 {
 					background: none;
 				}
+
 				.icon {
 					i {
 						&:before {
@@ -550,35 +632,46 @@ a {
 			}
 		}
 	}
+
 	.slide_content {
 		background: $white;
-		box-shadow: 0px 1px 10px -2px rgba(0,0,0,0.15);
-		> .pb_content-media {
+		box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
+
+		>.pb_content-media {
 			@extend .bg_image;
+
 			@include media-breakpoint-down(md) {
 				height: 350px;
 			}
 		}
-		> .pb_content-media, .slide_content-text {
+
+		>.pb_content-media,
+		.slide_content-text {
 			width: 50%;
+
 			@include media-breakpoint-down(md) {
 				width: 100%;
 			}
 		}
+
 		.slide_content-text {
 			padding: 50px;
+
 			@include media-breakpoint-down(md) {
 				padding: 20px;
 			}
 		}
 	}
+
 	.slick-arrow {
 		@include media-breakpoint-down(md) {
 			display: none;
 		}
+
 		&.prev {
 			left: -50px;
 		}
+
 		&.next {
 			right: -50px;
 		}

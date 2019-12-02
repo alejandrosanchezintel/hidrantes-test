@@ -17,7 +17,8 @@ class Solicitudes extends CI_Controller {
         public function index()
         {
                 $data['solicitudes'] = $this->solicitudes_model->get_solicitudes();
-
+                $data['title'] = 'Solicitudes';
+                
                 foreach($data['solicitudes'] as $key => $solicitud){
                         $inspeccion = $this->inspecciones_model->get_inspecciones($solicitud['inspeccion']);
                         $data['solicitudes'][$key]['accion'] = $inspeccion[0]['accion'];
@@ -27,7 +28,7 @@ class Solicitudes extends CI_Controller {
                                 $data['solicitudes'][$key]['hidrante_nombre'] = 'Pendiente';
                 }
 
-                $data['title'] = 'Solicitudes';
+                //$data['title'] = 'Solicitudes';
                 $this->load->view('templates/header', $data);
                 $this->load->view('templates/nav', $data);
                 $this->load->view('solicitudes/index', $data);

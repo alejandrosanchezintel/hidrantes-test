@@ -27,7 +27,7 @@
                   <th scope="col">Fecha de Solicitud</th>
                   <th scope="col">Fecha de Finalizacion</th>
                 </tr>
-
+               
                 <?php foreach ($inspecciones as $inspeccion): ?>
                         <tr>
                           <td><?php echo $inspeccion['id'] ?></td>
