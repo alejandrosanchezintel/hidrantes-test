@@ -31,6 +31,12 @@
                 <li><a contenedor="lista_inspecciones" href="<?php echo base_url(); ?>inspecciones/">Listar Inspecciones</a></li>
               </ul>
             </li>
+			<li class="nav-item"><a class="nav-link" contenedor="lista_solicitudes">Solicitudes</a>
+				<ul class="submenu">
+					<!--<li><a contenedor="nueva_inspeccion" href="<?php echo base_url(); ?>solicitudes/create">Nueva Solicitud</a></li>-->
+					<li><a contenedor="lista_inspecciones" href="<?php echo base_url(); ?>solicitudes/">Listar Solicitudes</a></li>
+				</ul>
+			</li>
             <?php } ?>
             <?php if($this->session->tipo == 0 || $this->session->tipo == 2){  ?>
             <li class="nav-item"><a class="nav-link" contenedor="lista_solicitudes">Solicitudes</a>

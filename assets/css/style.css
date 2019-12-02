@@ -1709,4 +1709,8 @@ a {
 .overflow-hidden {
   overflow: hidden; }
 
+.red-links a{
+	color: #533f03; !important;
+}
+
 /*# sourceMappingURL=style.css.map */
